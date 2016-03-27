@@ -4,8 +4,11 @@ rvm:
 - 2.3.0
 branches:
   only:
-  - source # branch to build
+  - source
 script:
 - bundle exec rake travis:script
 after_success:
 - bundle exec rake travis:after_success
+env:
+  global:
+    secure: QxVJTWS3N9iNjfr0oKhFTYrM5aTtDg6SX4iK/zLYmspRyUGwJiyRyxgJIVluuJUv1dnGsQ5a3aSRIa51LkZTvQV7wdyC/8xahn+8Oyaqubbc109wjym4++NH6MKepcF1SNX9QgYJIhbOTURz18GwmmfgxSoGSvO/Bh964PuWD12i4S27xDIbgLfUSx66u+NEcJbe6Rqaz6waQlOdewx/31rgaxd+rMwzRr6fcfVLvS6Nqm0lNXFXgf9Bw9vK2bFkNzxU8NNyivnDyUeB0vOcUAYoV/nM92wzeh3jDnGZa/Dwq0FIvKBLGpIHnrHlmf5Uwn1QMo//g9aiWYvH62aVCWtEJbPW+Y1QUT/DtE62LymzHoMOf3Gbh71u294Pno8DFZnPHyBMuK1dxtDcOtMie+mIO4JDmBzdu+HQv9m+vQHuNafJZOOA6MgNRaviQbCej9i5vX1ZWVETyZGIw1fp7aFo6ez/yvbAffO7MNQvXFE0qKcEkw7h/nMxM3CaQ94nhlnMqN/0kk6u/BIiQGw7V0h/Ailp6waNDpf2uiBfH3E/0uuI+zbfOzQt23zhDvP84QVJY+fSHtgtghOf8RfD78j/C4BOvOSiNhLJJMFYcM4aM7HJS2Z0Y08v1oGFd6yu4ulCz5fX4pECDjOl85i8Z4IFYocPxhWg4w9qjIz6wXo=

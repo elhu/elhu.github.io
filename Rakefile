@@ -23,10 +23,11 @@ namespace :travis do
   task :after_success do
     puts "\nRunning Travis Deployment"
     puts "\nSetting up Git access"
-    try "echo ${GH_TOKEN} > ./.git/credentials"
+    try "echo \"https://${GH_TOKEN}:x-oauth-basic@github.com\" > ~/.git-credentials"
     try "git config --global user.name ${GH_USER}"
     try "git config --global user.email ${GH_EMAIL}"
-    try "git remote set-url origin \"https://${GH_TOKEN}@github.com/elhu/elhu.github.io.git\""
+    try "git config --global credential.helper store"
+    try "git remote set-url origin \"https://github.com/elhu/elhu.github.io.git\""
 
     Rake::Task["deploy"].invoke
   end
