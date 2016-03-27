@@ -110,7 +110,7 @@ hr {
 
 .cell {
   background-color: $cell-color;
-  height: 35vh;;
+  min-height: 35vh;
   box-sizing: border-box;
   padding-left: 1em;
   padding-right: 1em;

@@ -1,7 +1,5 @@
-$blue: #019875;
-$secondary-color: $blue;
-
-$timeline-color: $blue;
+$green: #019875;
+$timeline-color: $green;
 
 // Mixins and Placeholders
 %clearfix {
@@ -88,7 +86,10 @@ $timeline-color: $blue;
         margin: -20px -20px 0 -20px;
         font-weight: 300;
 
-        &:hover {
+      }
+
+      &:hover {
+        h3 {
           background: darken($timeline-color, 5%);
         }
       }
@@ -105,6 +106,10 @@ $timeline-color: $blue;
         border-left:7px solid $timeline-color;
       }
 
+      &:hover:before {
+        border-left-color: darken($timeline-color, 5%);
+      }
+
       &.right {
         float: right;
 
@@ -114,6 +119,10 @@ $timeline-color: $blue;
           left: inherit;
           border-left: 0;
           border-right: 7px solid $timeline-color;
+        }
+
+        &:hover:before {
+          border-right-color: darken($timeline-color, 5%);
         }
       }
 
