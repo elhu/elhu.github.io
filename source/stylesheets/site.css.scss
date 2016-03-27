@@ -106,6 +106,10 @@ hr {
       background-color: darken($cell-color, 5%);
     }
   }
+
+  .grid {
+    width: auto;
+  }
 }
 
 .cell {
@@ -125,10 +129,24 @@ hr {
     display: inline-block;
   }
 
+  &.third {
+    @media screen and (min-width: 768px) {
+      flex: 0 0 31%;
+    }
+    display: inline-block;
+  }
+
   h3 {
     font-weight: 200;
     font-size: 2em;
     margin-top: 0.5em;
+  }
+
+  .cell {
+    background-color: darken($cell-color, 10%);
+    padding: 0;
+    min-height: 0;
+    padding: 0.5em;
   }
 }
 
