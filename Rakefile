@@ -7,7 +7,9 @@ end
 
 task :deploy do
   puts "\nCopying GitHub-specific files"
-  try "cp -rv ./github/* ./build/"
+  if (Dir.exists?('./github'))
+    try "cp -rv ./github/* ./build/"
+  end
 
   puts "\nDeploying to GitHub"
   try "middleman deploy"
